@@ -1,0 +1,19 @@
+{
+  "name": "rupalio-bookings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruthmwangi26/RUPALIO-BOOKINGS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ruthmwangi26/RUPALIO-BOOKINGS/issues"
+  },
+  "homepage": "https://github.com/Ruthmwangi26/RUPALIO-BOOKINGS#readme"
+}
