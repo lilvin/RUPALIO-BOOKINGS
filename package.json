@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ruthmwangi26/RUPALIO-BOOKINGS/issues"
   },
-  "homepage": "https://github.com/Ruthmwangi26/RUPALIO-BOOKINGS#readme"
+  "homepage": "https://github.com/Ruthmwangi26/RUPALIO-BOOKINGS#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
