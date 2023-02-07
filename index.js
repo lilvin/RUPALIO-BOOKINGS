@@ -9,7 +9,8 @@ const PORT = process.env.PORT;
 
 
 // connect to mongodb
-mongoose.connect("mongodb+srv://rwambui:12345@cluster0.zsey2xu.mongodb.net/?retryWrites=true&w=majority/booking");
+const connectionString = process.env.DATABASE_URL;
+mongoose.connect(connectionString);
 // // to prevent duplication
 mongoose.Promise = global.Promise;
 
