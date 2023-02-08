@@ -39,23 +39,23 @@ app.listen(PORT, () => {
 //  / view engine connection
  app.get('/', (req, res)=>{
     res.render('index');
-    
+    router.patch('/:id', async function (req, res) {
+      const id = req.params.id;
+      const updatedData = req.body;
+      console.log(id)
+      console.log(updatedData)
+   
+      try {
+          const dataUpdate = await bookingModel.findByIdAndUpdate(id, updatedData, { new: true });
+          res.status(200).json(dataUpdate);
+      } catch (error) {
+          res.status(400).json({ message: error.message });
+      }
+   });      
     });
    //  404 error
   
 app.use((req, res) =>{
    res.status(404).render('404', {title: '404'});
-   router.patch('/:id', async function (req, res) {
-     const id = req.params.id;
-     const updatedData = req.body;
-     console.log(id)
-     console.log(updatedData)
   
-     try {
-         const dataUpdate = await bookingModel.findByIdAndUpdate(id, updatedData, { new: true });
-         res.status(200).json(dataUpdate);
-     } catch (error) {
-         res.status(400).json({ message: error.message });
-     }
-  });      
   });
