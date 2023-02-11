@@ -3,8 +3,22 @@ body{
 }
 h1{
     color: rgb(90, 20, 255)
+    
+    
  }
 
  p1 {
     color: black;
+    font-size: medium;
+    font-family: 'Times New Roman';
  }
+ img {
+    float: left;
+    margin: 10px;
+    border-bottom: black
+  }
+
+  button{
+
+    color: rgb(8, 141, 79);
+}
