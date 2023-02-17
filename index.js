@@ -14,9 +14,9 @@ const PORT = process.env.PORT;
 const connectionString = process.env.DATABASE_URL;
 mongoose.connect(connectionString);
 // // to prevent duplication
-// mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 // route export
 app.use('/api',require('./routes/api'))
 
@@ -53,6 +53,8 @@ app.listen(PORT, () => {
       }
    });      
     });
+   //  db form data collection
+   
    //  404 error
   
 app.use((req, res) =>{
