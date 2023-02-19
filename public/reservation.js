@@ -5,7 +5,7 @@ var regionElement = document.getElementById("Region");
 
 // retrieving input values
 
-const name = String (nameElement.value); 
+const name = String (nameElement.value);
 const Region = String (regionElement.value);
 
 
@@ -15,17 +15,17 @@ const Region = String (regionElement.value);
         // alert('success');
         document.getElementById("results").textContent=(name + ' ' + 'you have been booked for' +' ' +Region);
             // send an AJAX request to save the task
-    
+
 
     }
         else{
             alert('please enter valid details');
         }
     }
-    
+
         $(document).ready(function(){
             $('.modal').modal();
-           
+
             $("form").submit(function(){
                 var  name = $('input').val();
                 var  Region = $('input').val();
@@ -45,4 +45,3 @@ const Region = String (regionElement.value);
             })
          })
 
-       

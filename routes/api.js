@@ -13,23 +13,35 @@ router.post('/booking', (req, res,next)=>{
     Booking.create(req.body).then((booking)=>{
         res.send(booking)
     }).catch(next)
-    
-    
+
+
     });
 
 
-//put(update) request
+//put(update/change) request
 router.put('/booking/:id', (req, res)=>{
-    Booking.findByIdAndUpdate({_id: req.params.id}, req.body).then((booking)=>{
-    res.send(booking)
+    Booking.findByIdAndUpdate({_id: req.params.id}, req.body).then(()=>{
+      Booking.findOne({_id: req.params.id}).then((booking)=>{
+        res.send(booking);
+      })
+
     });
-   
- 
+
 })
-// delete request
+// patch request
+router.patch('/booking/:id', (req, res)=>{
+    Booking.findByIdAndUpdate({_id: req.params.id}, req.body).then(()=>{
+      Booking.findOne({_id: req.params.id}).then((booking)=>{
+        res.send(booking);
+      })
+
+    });
+
+})
+// // delete request
 router.delete('/booking/:id', (req, res)=>{
-    Booking.findByIdAndDelete({_id: req.params.id}).then((booking)=>{
-    res.send(booking)
+    Booking.findByIdAndRemove({_id: req.params.id}).then((booking)=>{
+    res.send(booking);
      });
 })
 
